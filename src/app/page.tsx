@@ -78,7 +78,6 @@ export default function Home() {
     async function getProjects(){
       const res=await(await fetch('/api/get-projects',{
         method:'GET',
-        cache:'no-store',
         headers:{
           'Content-Type':'application/json'
         }
@@ -111,8 +110,10 @@ export default function Home() {
         </nav>
         {/* Body */}
         {isLoading?
-        <div className=' w-full  animate-spin grid place-items-center'>
-          <FontAwesomeIcon size='2x' icon={faSpinner} />
+        <div className=' w-full grid place-items-center'>
+          <div className=' animate-spin'>
+            <FontAwesomeIcon size='2x' icon={faSpinner} />
+          </div>
         </div>
         :
         <div className=' px-24 py-5 '>

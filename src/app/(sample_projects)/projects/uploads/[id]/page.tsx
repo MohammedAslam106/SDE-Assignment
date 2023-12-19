@@ -69,8 +69,10 @@ export default function page({params}:pageProps ){
                 <Header title="Upload"/>
                 <h1 className=" text-purple-600 font-bold py-5 text-3xl">Upload</h1>
                 { isLoading ?
-                <div className=" w-full h-56 animate-spin grid place-items-center">
-                    <FontAwesomeIcon icon={faSpinner} size='2x'/>
+                <div className=" w-full h-56 grid place-items-center">
+                    <div className=" animate-spin">
+                        <FontAwesomeIcon icon={faSpinner} size='2x'/>
+                    </div>
                 </div>
                 :
                     <>
