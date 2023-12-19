@@ -1,4 +1,3 @@
-import { db } from "@vercel/postgres"
 import { NextRequest, NextResponse } from "next/server"
 import { connect } from "@/dbConfig/dbConfig"
 import File from "@/models/media_file"
@@ -7,7 +6,6 @@ connect()
 export async function POST(request:Request,context:{params:{id:string}} ){
     try {
         const body=await request.json()
-        const client=await db.connect()
         const id=context.params.id
         console.log(id)
         console.log(body)

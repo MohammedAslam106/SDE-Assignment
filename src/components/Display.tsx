@@ -5,7 +5,6 @@ import { UploadButton } from "@/utils/uploadthing";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUpFromBracket, faUpload } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import { sql } from "@vercel/postgres";
 
 interface DisplayProps{
     

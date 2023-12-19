@@ -1,10 +1,9 @@
-import { db } from "@vercel/postgres"
+
 import { connect } from "@/dbConfig/dbConfig"
 import Chatbot from "@/models/chatbot"
 connect()
 export async function GET(request:Request){
     try {
-        const client=await db.connect()
         // const response=await client.sql `SELECT * FROM chatbot;`
         const response=await Chatbot.find()
         console.log(response)

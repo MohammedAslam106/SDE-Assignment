@@ -1,5 +1,4 @@
 'use client'
-import { sql } from "@vercel/postgres"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 import { twMerge } from "tailwind-merge"
